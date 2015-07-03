@@ -4,10 +4,11 @@ python:
   - "3.3"
   - "3.4"
   - "nightly"
-  - "pypy3"
+# - "pypy3"
 # command to install dependencies
 install:
   #- pip install .
+  - pip install -U pytest
   - pip install -r requirements.txt
 # command to run tests
-script: echo "test"
+script: py.test -v
