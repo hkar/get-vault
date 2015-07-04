@@ -21,9 +21,10 @@ class S3Storage(BaseStorage):
         conn = tinys3.Connection(self.access_key, self.access_secret, tls=True, endpoint=self.endpoint)
 
         f = open(file, 'rb')
+
         r = conn.upload(name, f, self.bucket)
 
-        if r.status_code == 201:
+        if r.status_code == 200:
             return True
         else:
-            raise CantUploadException()
+            raise CantUploadException(r.status_code)

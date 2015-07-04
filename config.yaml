@@ -1,0 +1,6 @@
+storage:
+  s3:
+    access_id: ""
+    access_secret: ""
+    bucket: "get-vault-travis-sandbox"
+    endpoint: "s3-eu-west-1.amazonaws.com"

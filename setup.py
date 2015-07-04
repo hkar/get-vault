@@ -8,6 +8,7 @@ setup(
     packages=['Vault'],
     install_requires=[
         "tinys3",
+        "pyyaml",
     ],
     license='GPL v3',
     long_description=open('README.md').read(),
