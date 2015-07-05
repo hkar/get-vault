@@ -30,9 +30,9 @@ pprint.pprint(config)
 # helpers
 ##
 
-def create_test_file(tmpdir):
+def create_test_file(tmpdir, length=1024):
     p = tmpdir.join("test_text.txt")
-    text = get_random_string(1024)
+    text = get_random_string(length)
     p.write(text)
     return p
 
