@@ -6,13 +6,6 @@ python:
   - "3.3"
   - "3.4"
 
-before_script:
-  - wget https://launchpad.net/test-db/employees-db-1/1.0.6/+download/employees_db-full-1.0.6.tar.bz2
-  - bunzip2 employees_db-full-1.0.6.tar.bz2
-  - ls
-  - cd employees_db-full-1.0.6
-  - mysql -v -t < employees.sql
-
 before_install:
   - env
   - sudo apt-get update -qq
@@ -22,5 +15,13 @@ install:
   - pip install .
   - pip install -U pytest
   - pip install -r requirements.txt
+
+before_script:
+  - wget https://launchpad.net/test-db/employees-db-1/1.0.6/+download/employees_db-full-1.0.6.tar.bz2
+  - bunzip2 employees_db-full-1.0.6.tar.bz2
+  - tar -xvf employees_db-full-1.0.6.tar
+  - cd employees_db
+  - mysql -v -t < employees.sql
+
 # command to run tests
 script: py.test -v
