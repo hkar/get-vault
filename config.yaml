@@ -1,3 +1,5 @@
+backup_prefix: 'default'
+
 storage:
   s3:
     access_id: ""

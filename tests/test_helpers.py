@@ -1,10 +1,9 @@
 __author__ = 'hkar'
 
-import random
-import string
 import os
 import yaml
 import pprint
+from Vault.helpers import *
 
 ###
 # overwrite local config variables for travis-ci
@@ -35,7 +34,3 @@ def create_test_file(tmpdir, length=1024):
     text = get_random_string(length)
     p.write(text)
     return p
-
-
-def get_random_string(length:int=64) -> str:
-    return ''.join([random.choice(string.ascii_letters + string.digits) for n in range(length)])
