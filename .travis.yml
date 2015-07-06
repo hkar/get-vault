@@ -21,7 +21,7 @@ before_script:
   - bunzip2 employees_db-full-1.0.6.tar.bz2
   - tar -xvf employees_db-full-1.0.6.tar
   - cd employees_db
-  - mysql -v -t < employees.sql
+  - mysql -t < employees.sql
 
 # command to run tests
 script: py.test -v
