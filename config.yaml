@@ -4,3 +4,11 @@ storage:
     access_secret: ""
     bucket: "get-vault-travis-sandbox"
     endpoint: "s3-eu-west-1.amazonaws.com"
+
+input:
+  mysql:
+    host: "localhost"
+    user: "root"
+    passwd: ""
+    database:
+      - 'employees'
