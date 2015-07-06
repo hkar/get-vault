@@ -24,4 +24,4 @@ before_script:
   - mysql -t < employees.sql
 
 # command to run tests
-script: py.test -v
+script: py.test -v tests
